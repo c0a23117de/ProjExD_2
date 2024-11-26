@@ -43,7 +43,9 @@ def init_bb_imgs() -> tuple[list[pg.Surface], list[int]]:
         imgs.append(bb_img)
     return imgs, accs 
 
-
+def get_kk_img(sum_mv: tuple[int, int]) -> pg.Surface:
+    kk_img = get_kk_img((0, 0))
+    kk_img = get_kk_img(tuple(sum_mv))
 
 def main():
     pg.display.set_caption("逃げろ！こうかとん")
