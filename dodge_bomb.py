@@ -4,7 +4,6 @@ import sys
 import time
 import pygame as pg
 
-
 WIDTH, HEIGHT = 1100, 650
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
@@ -28,8 +27,7 @@ def gameover(screen: pg.Surface) -> None:
     fonto = pg.font.Font(None, 80)
     txt = fonto.render("GAME OVER", True, (255, 255, 255))
     screen.blit(txt, [400, 325])
-    
-    
+        
     pg.display.update()
     time.sleep(5)
 
@@ -57,8 +55,6 @@ def main():
     bb_rct = kk_img.get_rect()
     bb_rct.center = random.randint(0, WIDTH), random.randint(0, HEIGHT)
     vx, vy = +5, +5
-    
-    
     clock = pg.time.Clock()
     tmr = 0
     while True:
@@ -69,8 +65,6 @@ def main():
             gameover(screen)
             return  # ゲームオーバー
         screen.blit(bg_img, [0, 0]) 
-
-        
 
         key_lst = pg.key.get_pressed()
         sum_mv = [0,0]
